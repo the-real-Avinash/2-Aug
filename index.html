@@ -1,0 +1,23 @@
+<script>
+  var globalEC = "Global scope";
+
+  function a() {
+    console.log("function a ");
+    debugger;
+    b();
+    console.log("i'll print after all the execution");
+  }
+
+  function b() {
+    debugger;
+    console.log("Function b");
+    c();
+  }
+
+  function c() {
+    debugger;
+    console.log("   Function c ");
+  }
+  debugger;
+  a();
+</script>
